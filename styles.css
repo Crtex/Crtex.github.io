@@ -12,7 +12,7 @@ body {
 
 .video-container {
     width: 1080px;
-    max-width: 100vw;
+    max-width: 95vw;
     position: relative;
     clip-path: url(#svg-path);
 }
@@ -113,4 +113,11 @@ body {
 .invisible {
     visibility: hidden;
     opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .video-controls__overlay {
+        height: 90px;
+        padding: 0 15px;
+    }
 }
