@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tractive HTML5 video player</title>
+  <link rel="stylesheet" href="/styles.css" type="text/css">
+</head>
+<body>
+<div id="content-container" class="content-container">
+  <div id="video-container" class="video-container">
+    <video id="video" class="video" preload="auto">
+      <source src="https://tractive.com/assets/static/videos/ActivityMonitoring_15s_EN.mp4" type="video/mp4"></source>
+    </video>
+    <div id="video-controls__overlay" class="video-controls__overlay hidden">
+      <button id="video-controls__play" class="video-controls__play hidden playback_button">
+        <svg id="playback-icon__play" class="playback-icon" viewBox="0 0 100 100">
+          <path fill="#FFFFFF" d="M 10,50 L 10 0, L 100 50, L 10 100 z"></path>
+        </svg>
+        <svg id="playback-icon__pause" class="playback-icon hidden" viewBox="0 0 100 100">
+          <rect x="10" y="5" width="20" height="100" fill="#FFFFFF"/>
+          <rect x="70" y="5" width="20" height="100" fill="#FFFFFF"/>
+        </svg>
+      </button>
+      <div class="controls-block">
+        <div id="video-controls__time" class="video-controls__time playback-label hidden">00:00</div>
+        <div id="video-controls__volume" class="video-controls__volume hidden">
+          <svg id="playback-icon__volume_active" class="playback-icon-volume hidden"
+               viewBox="0 0 100 100">
+            <rect x="10" rx="2" ry="2" width="6" height="0" fill="#FFFFFF">
+              <animate attributeName="height" values="4;16;4" dur="1.2s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="48;42;48" dur="1.2s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="21" rx="2" ry="2" width="6" height="0" fill="#FFFFFF">
+              <animate attributeName="height" values="20;4;20" dur="0.85s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="40;48;40" dur="0.85s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="32" rx="2" ry="2" width="6" height="0" fill="#FFFFFF">
+              <animate attributeName="height" values="60;4;60" dur="0.63s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="20;48;20" dur="0.63s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="43" rx="2" ry="2" width="6" height="0" fill="#FFFFFF">
+              <animate attributeName="height" values="4;60;4" dur="0.98s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="48;20;48" dur="0.98s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="54" rx="2" ry="2" width="6" height="0" fill="#FFFFFF">
+              <animate attributeName="height" values="70;4;70" dur="0.8s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="15;48;15" dur="0.8s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="65" rx="2" ry="2" width="6" height="0" fill="#FFFFFF">
+              <animate attributeName="height" values="30;4;30" dur="0.6s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="35;48;35" dur="0.6s" repeatCount="indefinite"/>
+            </rect>
+          </svg>
+          <svg id="playback-icon__volume_inactive" class="playback-icon-volume" viewBox="0 0 100 100">
+            <rect x="10" rx="2" ry="2" y="48" width="6" height="4" fill="#FFFFFF"></rect>
+            <rect x="21" rx="2" ry="2" y="48" width="6" height="4" fill="#FFFFFF"></rect>
+            <rect x="32" rx="2" ry="2" y="48" width="6" height="4" fill="#FFFFFF"></rect>
+            <rect x="43" rx="2" ry="2" y="48" width="6" height="4" fill="#FFFFFF"></rect>
+            <rect x="54" rx="2" ry="2" y="48" width="6" height="4" fill="#FFFFFF"></rect>
+            <rect x="65" rx="2" ry="2" y="48" width="6" height="4" fill="#FFFFFF"></rect>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<svg>
+  <defs>
+    <clipPath id="svg-path" clipPathUnits="objectBoundingBox">
+      <path fill="#FFFFFF" stroke="#000000" stroke-width="1.5794" stroke-miterlimit="10"
+            d="M 0 0.089, A 0.0375 0.066 0 0 1 0.0375 0.022, S 0.5,-0.01 0.9625,0.022, A 0.0375 0.066 0 0 1 1 0.089, L 1 0.91, A 0.0375 0.066 0 0 1 0.9625 0.978, S 0.5,1.01 0.0375,0.978, A 0.0375 0.066 0 0 1 0 0.911 Z"/>
+    </clipPath>
+
+    <symbol id="play-icon" viewBox="0 0 100 100">
+
+    </symbol>
+
+    <symbol id="pause" viewBox="0 0 24 24">
+      <path d="M14.016 5.016h3.984v13.969h-3.984v-13.969zM6 18.984v-13.969h3.984v13.969h-3.984z"></path>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="scripts/index.js"></script>
+
+</body>
+</html>
